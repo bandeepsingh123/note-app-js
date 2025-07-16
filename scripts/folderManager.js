@@ -71,5 +71,9 @@ export function getFolderById(folderId) {
 export function folderNameExists(name) {
   const folderList = getAllFolders();
   const folder = folderList.filter((folder) => folder.name === name);
-  return true;
+  if (folder.length === 0) {
+    return false;
+  } else {
+    return true;
+  }
 }
